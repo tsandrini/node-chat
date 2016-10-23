@@ -36,7 +36,9 @@ module.exports = function(app, io) {
 
 
 function renderMain(res) {
-	res.render('chat', {
-		title: 'Chat'
+	res.render('chat.twig', {
+		context: {
+			title: 'Chat'
+		}
 	});
 }

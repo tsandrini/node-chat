@@ -1,7 +1,11 @@
 $(function() {
-    const socket = io(),
+    const socket = io();
           beep_sound = new Audio('beep.wav'),
-          default_title = 'DIGINEX CHAT';
+          default_title = String(document.title);
+          alert_icon = 'squirrel.png',
+          alert_title = 'Přišla vám nová zpráva !',
+          alert_text = 'Máte novou zprávu ze skvělého diginex chatu.';
+
 
     let focused_window = true,
         is_default_title = true;
@@ -17,9 +21,14 @@ $(function() {
     socket.on('chat message', function(msg) {
         $('#messages').append($('<li>').text(msg));
         if(!focused_window) {
-            document.title = 'Přišla vám zpráva!';
+
+            notify({alert_title: alert_title, 
+                    beep_sound: beep_sound, 
+                    title: alert_title,
+                    text: alert_text,
+                    icon: alert_icon});
+
             is_default_title = false;
-            beep_sound.play();
         }
     });
 
@@ -40,11 +49,3 @@ $(function() {
 
 
 });
-
-function htmlDecode(input) {
-
-    input = JSON.parse(htmlDecode("<%= JSON.stringify(" + input + ") %>"));
-    var e = document.createElement('div');
-    e.innerHTML = input;
-    return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
-}
