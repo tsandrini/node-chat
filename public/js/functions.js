@@ -1,11 +1,13 @@
 function clearMsg(msg) {
     msg = msg.replace(/\s+/, "");
     msg = escapeHtml(msg);
+    msg = parseLinks(msg);
+
     return msg;
 }
 
 function escapeHtml(text) {
-    var map = {
+    const map = {
         '&': '&amp;',
         '<': '&lt;',
         '>': '&gt;',
@@ -14,6 +16,12 @@ function escapeHtml(text) {
     };
     return text.replace(/[&<>"']/g, function(m) {
         return map[m];
+    });
+}
+
+function parseLinks(msg) {
+    return msg.replace( /((https?|ftp):\/\/|www\.)[^\s/$.?#].[^\s]*/ig, function(m) {
+        return ('<a href="' + m + '">' + m + '</a>');
     });
 }
 

@@ -19,7 +19,7 @@ $(function() {
         return false;
     });
     socket.on('chat message', function(msg) {
-        $('#messages').append($('<li>').text(msg));
+        $('#messages').append($('<li>'+  msg +'</li>'));
         if(!focused_window) {
 
             notify({alert_title: alert_title, 

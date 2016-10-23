@@ -1,5 +1,4 @@
 const express = require('express');
-const default_title = 'DIGINEX_CHAT';
 
 module.exports = function(app, io) {
 
