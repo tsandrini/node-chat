@@ -3,9 +3,7 @@ $(function() {
           beep_sound = new Audio('beep.wav'),
           default_title = String(document.title);
           alert_icon = 'squirrel.png',
-          alert_title = 'Přišla vám nová zpráva !',
-          alert_text = 'Máte novou zprávu ze skvělého diginex chatu.';
-
+          alert_title = 'Přišla vám nová zpráva !';
 
     let focused_window = true,
         is_default_title = true;
@@ -25,7 +23,7 @@ $(function() {
             notify({alert_title: alert_title, 
                     beep_sound: beep_sound, 
                     title: alert_title,
-                    text: alert_text,
+                    text: msg,
                     icon: alert_icon});
 
             is_default_title = false;
