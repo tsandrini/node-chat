@@ -2,6 +2,7 @@ function clearMsg(msg) {
     msg = msg.replace(/\s+/, "");
     msg = escapeHtml(msg);
     msg = parseLinks(msg);
+    msg = emojione.toImage(msg);
 
     return msg;
 }
@@ -44,9 +45,10 @@ function desktopNotification(data) {
     if (Notification.permission !== "granted") 
         Notification.requestPermission();
     else {
+        let text = data.text.replace(/<img.*?alt="(.*?)".*?\/>|<\/img>/ig, '$1');
         var notification = new Notification(data.title, {
             icon: '/img/' + data.icon,
-            body: data.text,
+            body: text
         });
         notification.onclick = function() {
             window.focus();
