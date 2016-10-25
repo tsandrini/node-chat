@@ -13,11 +13,13 @@ module.exports = function(app, io) {
 
 	io.on('connection', function(socket) {
 
-		console.log('User has connected');
+		var address = socket.request.connection.remoteAddress;
+
+		console.log('User with address: ' + address + ' has connected');
 
 		socket.on('disconnect', function() {
 
-			console.log('User has disconnected');
+			console.log('User with address: ' + address + ' has disconnected');
 
 		});
 
