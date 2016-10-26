@@ -3,23 +3,119 @@
         <title>
             {{ title }}
         </title>
-        <link href="/css/chat.css" rel="stylesheet" type="text/css"></link>
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+        <link href="/css/chat.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="/css/emotes.css">
+        <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.css">
         <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="/js/menu.js"></script>
+        <script src="/js/jscolor.js"></script>
     </head>
     <body>
-        <section id="welcome-form" style="display: none;">
+
+        <!-- Hlavicka stranky -->
+        <header>
+            <div class="horni-menu">
+                <!-- Zobrazit pouze v chatu --><div class="popis"><p>Chatujete jako: <span class="tucne">Žatky</span></p><i class="fa fa-sign-out" aria-hidden="true" style="margin-right: 5px"></i>Odejít<p></p></div>
+                <h2>DIGINEX Chill Chat</h2>
+                <!-- Zobrazit pouze v chatu --><div class="rozklikatko" id="zobraz_nastaveni"><i class="fa fa-cog" aria-hidden="true"></i></div>
+            </div>
+            <!-- Zobrazit pouze v chatu -->
+                <div id="nastaveni_mobilni" class="nastaveni" style="display:none;">
+                    <div class="radka">
+                        <!-- Změna nickname -->
+                        <div class="policko nickname">
+                            <p>Změna nickname</p>
+                            <input type="text" value="Žatky">
+                        </div>
+                        <!-- Rounded switch -->
+                        <div class="policko klikatko">
+                            <p>Vypnout zvuk</p>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                        <div class="policko klikatko">
+                            <p>Vypnout něco jiného</p>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                        <!-- Barva -->
+                        <div class="policko klikatko">
+                            <p>Barva</p>
+                            <input class="jscolor" value="367fa9">
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="policko zvuk">
+                            <input type="submit" value="Uložit nastavení">
+                        </div>
+                    </div>
+                </div>
+            <!-- Konec -->
+        </header>
+        <!-- Konec hlavicky -->
+
+        <section id="welcome-form">
+            <div class="welcome">
+                <h2>Vítejte na chatovacím systému</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus luctus egestas leo. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Aenean vel massa quis mauris vehicula lacinia. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nullam at arcu a est sollicitudin euismod. Praesent vitae arcu tempor neque lacinia pretium. Integer malesuada. Maecenas libero. Nullam dapibus fermentum ipsum. Etiam quis quam. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
             <div class="nickname">
                 <form action="">
-                    <input type="text" name="nickname" placeholder="Vaše přezdívka...">
+                    <div>
+                        <label>Vaše přezdívka</label>
+                        <input type="text" name="nickname" placeholder="Vaše přezdívka...">
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Vstoupit do chatu">
+                    </div>
                 </form>
             </div>
         </section>
         <section id="chat">
             <ul id="messages">
+                <li>
+                    <div class="nickname">
+                        <p style="color: #367fa9;">Žatky</p>
+                    </div>
+                    <div class="zprava">
+                        <p>
+
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vitae arcu. Nunc tincidunt ante vitae massa. Pellentesque ipsum. Nulla pulvinar eleifend sem. Aliquam erat volutpat. Duis risus. Morbi scelerisque luctus velit. Integer in sapien. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
+
+                            Aliquam in lorem sit amet leo accumsan lacinia. Integer imperdiet lectus quis justo. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Aenean id metus id velit ullamcorper pulvinar. Nullam sit amet magna in magna gravida vehicula. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Maecenas sollicitudin. Duis viverra diam non justo. Aliquam erat volutpat. Aliquam erat volutpat. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer malesuada. In dapibus augue non sapien. Duis risus. Etiam dictum tincidunt diam.
+
+                            Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Mauris tincidunt sem sed arcu. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Proin mattis lacinia justo. Duis risus. Nulla pulvinar eleifend sem. Suspendisse nisl. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Nullam sit amet magna in magna gravida vehicula. Duis viverra diam non justo. Etiam posuere lacus quis dolor. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+
+                        </p>
+                    </div>
+                </li>
+                <li style="display: flex">
+                    <div class="nickname">
+                        <p style="color: #367fa9;">Žatky</p>
+                    </div>
+                    <div class="zprava">
+                        <p>
+
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vitae arcu. Nunc tincidunt ante vitae massa. Pellentesque ipsum. Nulla pulvinar eleifend sem. Aliquam erat volutpat. Duis risus. Morbi scelerisque luctus velit. Integer in sapien. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
+
+                            Aliquam in lorem sit amet leo accumsan lacinia. Integer imperdiet lectus quis justo. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Aenean id metus id velit ullamcorper pulvinar. Nullam sit amet magna in magna gravida vehicula. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Maecenas sollicitudin. Duis viverra diam non justo. Aliquam erat volutpat. Aliquam erat volutpat. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer malesuada. In dapibus augue non sapien. Duis risus. Etiam dictum tincidunt diam.
+
+                            Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Mauris tincidunt sem sed arcu. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Proin mattis lacinia justo. Duis risus. Nulla pulvinar eleifend sem. Suspendisse nisl. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Nullam sit amet magna in magna gravida vehicula. Duis viverra diam non justo. Etiam posuere lacus quis dolor. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+
+                        </p>
+                    </div>
+                </li>
+
+
             </ul>
             <form action="">
-                <input autocomplete="off" id="m"/ autofocus>
+                <input autocomplete="off" id="m" autofocus />
                 <button>
                     Odeslat
                 </button>
