@@ -4,13 +4,10 @@
             {{ title }}
         </title>
         <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
-        <link href="/css/chat.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="/css/emotes.css">
-        <link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.css">
-        <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="/js/menu.js"></script>
-        <script src="/js/jscolor.js"></script>
+        <link href="{{ url() }}/css/chat.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="{{ url() }}/css/emotes.css">
+        <link rel="stylesheet" type="text/css" href="{{ url() }}/libs/font-awesome/css/font-awesome.css">
+        <link href="{{ url() }}/img/favicon.ico" rel="icon" type="image/x-icon" />
     </head>
     <body>
 
@@ -102,12 +99,7 @@
                     <div class="zprava">
                         <p>
 
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vitae arcu. Nunc tincidunt ante vitae massa. Pellentesque ipsum. Nulla pulvinar eleifend sem. Aliquam erat volutpat. Duis risus. Morbi scelerisque luctus velit. Integer in sapien. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.
-
-                            Aliquam in lorem sit amet leo accumsan lacinia. Integer imperdiet lectus quis justo. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Aenean id metus id velit ullamcorper pulvinar. Nullam sit amet magna in magna gravida vehicula. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Maecenas sollicitudin. Duis viverra diam non justo. Aliquam erat volutpat. Aliquam erat volutpat. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer malesuada. In dapibus augue non sapien. Duis risus. Etiam dictum tincidunt diam.
-
-                            Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Mauris tincidunt sem sed arcu. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Proin mattis lacinia justo. Duis risus. Nulla pulvinar eleifend sem. Suspendisse nisl. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Nullam sit amet magna in magna gravida vehicula. Duis viverra diam non justo. Etiam posuere lacus quis dolor. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aliquam erat volutpat. 
                         </p>
                     </div>
                 </li>
@@ -122,9 +114,14 @@
             </form>
         </section>
     </body>
-    <script src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="/js/functions.js"></script>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   	<script src="{{ url() }}/js/menu.js"></script>
+   	<script src="{{ url() }}/js/jscolor.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-    <script type="text/javascript" src="/js/emojione.min.js"></script>
-    <script type="text/javascript" src="/js/chat.js"></script>
+    <script type="text/javascript" src="{{ url() }}/js/emojione.min.js"></script>
+
+    <!-- CHAT-CORE-JS -->
+    <script src="{{ url() }}/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="{{ url() }}/js/functions.js"></script>
+    <script type="text/javascript" src="{{ url() }}/js/chat.js"></script>
 </html>

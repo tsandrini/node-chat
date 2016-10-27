@@ -1,135 +1,135 @@
-body{
+body {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-      #chat {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          width: 100%;
-      }
-      
-      body {
-          font-size: 14px;
-      }
-      
-      #chat form {
-          background: #367fa9;
-          padding: 3px;
-          position: fixed;
-          bottom: 0;
-          width: 100%;
-          margin-bottom: 0;
-      }
-      
-      #chat form input {
-          border: 0;
-          padding: 10px;
-          width: 90%;
-          margin-right: .5%;
-      }
-      
-      #chat form button {
-          width: 9%;
-          background: rgb(130, 224, 255);
-          border: none;
-          padding: 10px;
-      }
+#chat {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
 
-        #chat form button:hover {
-            width: 9%;
-            background: rgb(265, 265, 265);
-            cursor: pointer;
-        }
-      
-      #messages {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          padding-bottom: 100px;
-      }
-      
-      #messages li {
-          padding: 5px 10px;
-      }
-      
-      #welcome-form .nickname {}
+body {
+    font-size: 14px;
+}
 
-      header{
-          background-color: #367fa9;
-          display: flex;
-          flex-direction:column;
-      }
+#chat form {
+    background: #367fa9;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
 
-      header .horni-menu{
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-      }
+#chat form input {
+    border: 0;
+    padding: 10px;
+    width: 90%;
+    margin-right: .5%;
+}
 
-      header .horni-menu .popis{
-          color: white;
-          margin-left:15px;
-          width: 150px
-      }
+#chat form button {
+    width: 9%;
+    background: rgb(130, 224, 255);
+    border: none;
+    padding: 10px;
+}
 
-      header .horni-menu .popis .tucne{
-          font-weight: bolder;
-      }
+#chat form button:hover {
+    width: 9%;
+    background: rgb(265, 265, 265);
+    cursor: pointer;
+}
 
-      header .horni-menu h2{
-          color: white;
-          width: 250px
-      }
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+}
 
-      header .horni-menu .rozklikatko{
-          width: 150px;
-          text-align: right;
-          margin-right: 15px;
-          color: white;
-          cursor: pointer;
-      }
+#messages li {
+    padding: 5px 10px;
+}
 
-      header .radka .nastaveni_mobilni{
-          justify-content: flex-end;
-          flex-direction: column;
-          display: flex;
-          margin-right: 15px;
-          background: white;
-          width: 300px;
-          position: absolute;
-          right: 0;
-          padding: 20px;
-      }
+#welcome-form .nickname {}
 
-      header .radka .nastaveni_mobilni .policko{
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-          align-items: center;
-      }
+header {
+    background-color: #367fa9;
+    display: flex;
+    flex-direction: column;
+}
 
-      #welcome-form{
-          width: 450px;
-          margin: 0 auto;
-      }
+header .horni-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-      #welcome-form .nickname{
-          margin: 0 auto;
-          width: 300px;
-      }
+header .horni-menu .popis {
+    color: white;
+    margin-left: 15px;
+    width: 150px
+}
 
-        #welcome-form .nickname > form > label{
-            margin-right: 15px;
-        }
+header .horni-menu .popis .tucne {
+    font-weight: bolder;
+}
 
-        #welcome-form .nickname > form > .button{
-            margin-top:10px;
-            text-align: center
-        }
+header .horni-menu h2 {
+    color: white;
+    width: 250px
+}
 
-#messages li{
+header .horni-menu .rozklikatko {
+    width: 150px;
+    text-align: right;
+    margin-right: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+header .radka .nastaveni_mobilni {
+    justify-content: flex-end;
+    flex-direction: column;
+    display: flex;
+    margin-right: 15px;
+    background: white;
+    width: 300px;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+}
+
+header .radka .nastaveni_mobilni .policko {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+#welcome-form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+#welcome-form .nickname {
+    margin: 0 auto;
+    width: 300px;
+}
+
+#welcome-form .nickname > form > label {
+    margin-right: 15px;
+}
+
+#welcome-form .nickname > form > .button {
+    margin-top: 10px;
+    text-align: center
+}
+
+#messages li {
     display: flex
 }
 
@@ -137,8 +137,8 @@ body{
     background: #ecf0f5;
 }
 
-#messages li .nickname{
-    width:75px;
+#messages li .nickname {
+    width: 75px;
     margin-right: 10px;
     font-weight: bolder;
     border-right: 1px solid #367fa9;
@@ -146,19 +146,20 @@ body{
     justify-content: center;
     align-items: center;
     padding-right: 10px;
-    margin-left:10px;
+    margin-left: 10px;
 }
 
-#messages li .zprava{
+#messages li .zprava {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 99%;
     text-align: justify
 }
 
 
 /* The switch - the box around the slider */
+
 .switch {
     position: relative;
     display: inline-block;
@@ -166,10 +167,16 @@ body{
     height: 20px;
 }
 
+
 /* Hide default HTML checkbox */
-.switch input {display:none;}
+
+.switch input {
+    display: none;
+}
+
 
 /* The slider */
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -208,7 +215,9 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+
 /* Rounded sliders */
+
 .slider.round {
     border-radius: 34px;
 }
